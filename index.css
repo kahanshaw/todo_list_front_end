@@ -2,6 +2,11 @@ html {
     font-family: sans-serif;
 }
 
+li {
+    margin-bottom: 30px;
+    padding: 5px;
+}
+
 .priority-high {
     color: red;
 }
@@ -23,4 +28,5 @@ span {
     font: bold;
     color: red;
     font-weight: bold;
+    box-shadow: inherit;
 }
