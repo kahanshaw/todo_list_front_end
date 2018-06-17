@@ -7,10 +7,12 @@ li {
     padding: 2px;
     background-color: none;
     border-radius: 10px;
+    display: block
+    margin-left: none;
 }
 
 li:hover {
-    background-color: #D3D3D3;
+    background-color: #f1f1f1;
 }
 
 .priority-high {
@@ -30,10 +32,13 @@ li:hover {
 }
 
 span {
-    border-style: groove;
+    border-radius: 7px;
     font: bold;
-    color: red;
+    color: black;
     font-weight: bold;
+    background-color: lightgray;
+    border-left: 5px;
+    padding: 5px;
 }
 
 #add-new-todo-button {
@@ -49,10 +54,12 @@ span {
     margin-left: 6px;
 }
 
-#add-new-todo-button:active {
-    box-shadow: 0.5px 1px;
-}
-
 #add-new-todo-button:hover {
     background-color: #ff3232;
+    box-shadow: 2px 3px #888888;
+}
+
+#add-new-todo-button:active {
+    box-shadow: 0.5px 1px #888888;
+    background-color: red;
 }

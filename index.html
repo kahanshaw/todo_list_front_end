@@ -3,6 +3,22 @@
     <head>
         <title>Kalen's to do list</title>
         <link rel="stylesheet" href="/index.css" type="text/css"/>
+        <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+        
+        <script>
+            $(document).ready(function() {
+                 $("#add-new-todo-button").click(function(){
+                    var newTodoBlock = $(this).closest("#new-todo-block")
+                    var newTodo = newTodoBlock.find("#new-todo-description")
+                    var minuteEstimate = newTodoBlock.find("#new-todo-minute-estimate")
+                    
+                    $("ul").append("<li> <input type='checkbox'/>" + newTodo.val() + "<span class='new-todo-minute-estimate'>" + minuteEstimate.val() + " minutes</span> </li>")
+                    
+                    newTodo.val("")
+                    minuteEstimate.val("")
+                })
+            })
+        </script>
     </head>
     
     <body>
@@ -11,15 +27,15 @@
         <ul>
         <li>
             <input type= "checkbox">
-            <a href="/show.html">Wake up at 7-8am</a>
+            <a href="/show.html">Wake up at <span>7-8am</span></a>
         </li>
         <li class="priority-medium-high">
             <input type= "checkbox">
-            Brush my teeth 5 min
+            Brush my teeth <span>5 min</span
         </li>
         <li class="priority-high">
             <input type= "checkbox">
-            Take a shower 8 min
+            Take a shower <span>8 min</span>
         </li>
         <li class="priority-medium">
             <input type= "checkbox">
@@ -30,9 +46,10 @@
             Play PS4
         </li> 
         </ul>
-        
-        <input type="text" placeholder= "Add a new to do...">
-        <input type="number" placeholder= "Estimate of time it will take" >
+        <div id="new-todo-block">
+        <input type="text" id="new-todo-description" placeholder= "Add a new to do...">
+        <input type="number" id="new-todo-minute-estimate" placeholder= "Amount of time it will take (min)" >
         <input type="submit" id="add-new-todo-button" value="Add to-do">
+        </div>
     </body>
 </html>
