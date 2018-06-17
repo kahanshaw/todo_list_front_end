@@ -1,0 +1,26 @@
+html {
+    font-family: sans-serif;
+}
+
+.priority-high {
+    color: red;
+}
+
+.priority-medium {
+    color: blue;
+}
+
+.priority-low {
+    color: green;
+}
+
+.priority-medium-high {
+    color: cyan;
+}
+
+span {
+    border-style: groove;
+    font: bold;
+    color: red;
+    font-weight: bold;
+}
